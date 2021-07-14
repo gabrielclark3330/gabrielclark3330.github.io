@@ -8,27 +8,27 @@
 @font-face {
     font-family: Biotif-Regular;
     src: url(../fonts/biotif.woff2) format("woff2");
-  }
-  @font-face {
-    font-family: Recoleta;
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: normal;
-    src: url(../fonts/recoleta.woff2) format("woff2"),
-      url(../fonts/recoleta.woff) format("woff");
-  }
-  html {
-    font-family: "Biotif-Regular", 'Times New Roman', Times, serif;
-    background: #FBF8F3;
-    overscroll-behavior: none;
-    overflow-x: hidden;
-  }
-  body{
-      position: absolute;
-      margin:0;
-      min-height: 100vh;
-      width: 100vw;
-  }
+}
+@font-face {
+font-family: Recoleta;
+font-style: normal;
+font-weight: 400;
+font-stretch: normal;
+src: url(../fonts/recoleta.woff2) format("woff2"),
+    url(../fonts/recoleta.woff) format("woff");
+}
+html {
+font-family: "Biotif-Regular", 'Times New Roman', Times, serif;
+background: #FBF8F3;
+overscroll-behavior: none;
+overflow-x: hidden;
+}
+body{
+    position: absolute;
+    margin:0;
+    min-height: 100vh;
+    width: 100vw;
+}
 .s-nav {
     z-index: 1;
     position: fixed;
@@ -61,6 +61,11 @@
 .middleHeader {
     position: absolute;
     right: 47vw;
+}
+@media only screen and (max-width: 560px) {
+    .middleHeader{
+        display: none;
+    }
 }
 .lastHeader {
     display: flex;
@@ -110,15 +115,6 @@
     font-size: 15px;
     font-weight: 100;
 }
-.horLine {
-    position: relative;
-    display: flex;
-    background-color: black;
-    height: 1px;
-    width: 90vw;
-    top: 8vh;
-    margin: 0 auto 70px auto;
-}
 .head-text {
     height:fit-content;
     width: 100vw;
@@ -145,6 +141,28 @@
     text-decoration: none;
     color: black;
 }
+.horLine {
+    position: relative;
+    display: flex;
+    background-color: black;
+    height: 1px;
+    width: 90vw;
+    top: 8vh;
+    margin: 0 auto 70px auto;
+}
+.c-title-card{
+    width: 100%;
+    position: relative;
+    display: block;
+    transition: all 0.7s ease-in-out;
+    border: 4em auto 4em auto;
+    font-family: Recoleta, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 80px;
+    text-align: left;
+    display: block;
+    margin-bottom: 1em;
+    color: black;
+}
 .c-tile {
     width: 100%;
     border-radius: 20px;
@@ -161,12 +179,6 @@
     -webkit-backdrop-filter: blur( 7.5px );
     /* border: 1px solid rgba( 255, 255, 255, 0.18 ); so far causing problems with blue lines apearing*/
 }
-.c-title__category {
-    text-align: right;
-}
-.c-tile__title {
-    text-align: right;
-}
 .c-tiles {
     z-index: 0; /*Decide if cards go over or under header*/
     position: relative;
@@ -175,7 +187,7 @@
     display: grid;
     gap: 4em;
 }
-  .c-tile__title {
+.c-tile__title {
     font-family: Recoleta, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 40px;
     text-align: left;
