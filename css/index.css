@@ -163,6 +163,14 @@ body{
     margin-bottom: 1em;
     color: black;
 }
+.c-tiles {
+    z-index: 0; /*Decide if cards go over or under header*/
+    position: relative;
+    margin: 4em auto 0 auto;
+    max-width: 90%;
+    display: grid;
+    gap: 4em;
+}
 .c-tile {
     width: 100%;
     border-radius: 20px;
@@ -178,14 +186,6 @@ body{
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     /* border: 1px solid rgba( 255, 255, 255, 0.18 ); so far causing problems with blue lines apearing*/
-}
-.c-tiles {
-    z-index: 0; /*Decide if cards go over or under header*/
-    position: relative;
-    margin: 4em auto 0 auto;
-    max-width: 90%;
-    display: grid;
-    gap: 4em;
 }
 .c-tile__title {
     font-family: Recoleta, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -407,4 +407,17 @@ body{
     transition: all 0.3s ease-out;
     transform: scale3d(0.99, 0.99, 0.99) translateZ(0);
     box-shadow: 0 0 0 transparent;
+}
+
+/*footer*/
+.c-footer{
+    width: 100%;
+    height: 4em;
+    position: relative;
+    display: block;
+    transition: all 0.7s ease-in-out;
+    padding: 3em 3em 4em;
+    border: 4em auto 0 auto;
+    margin-top: 8em;
+    background-color: #FBF8F3;
 }
