@@ -62,6 +62,7 @@ body{
     position: absolute;
     right: 47vw;
 }
+/*Makes the logo disapear for small screens*/
 @media only screen and (max-width: 560px) {
     .middleHeader{
         display: none;
@@ -377,9 +378,11 @@ body{
     top: 50vh;
     left: 10vw;
 }
+
 /*Sub Page Formatting*/
 .c-sub-page-about {
-    width: 100%;
+    width: 95%;
+    max-width: 768px;
     border-radius: 20px;
     position: relative;
     display: block;
